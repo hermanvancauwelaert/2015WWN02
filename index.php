@@ -10,9 +10,15 @@ define('INC_PROJ','/2015/2015WWN02/');
 define('INC_ROOT',$_SERVER['DOCUMENT_ROOT'].INC_PROJ);
 define('INC_MODU',INC_ROOT.'modules/');
 define('INC_CONF',INC_ROOT.'config/');
+
 define('INC_UTIL',INC_ROOT.'util/');
-require(INC_CONF.'config.php');
-require(INC_UTIL.'connection.php');
+
+require(INC_ROOT.'autoinclude.php');
+
+autoinclude::FilesIn(INC_CONF);
+autoinclude::FilesIn(INC_UTIL);
+//require(INC_CONF.'config.php');
+//require(INC_UTIL.'connection.php');
 
 connection::connect();
 
@@ -56,10 +62,10 @@ Tokyo<br>
     
 <div class='column'>
 <h1>invulformulier</h1>
-<?php require(INC_MODU.'form1hndlr.php'); ?>
-<?php require(INC_MODU.'form1.php'); ?>
-<?php require(INC_MODU.'form2hndlr.php'); ?>
-<?php require(INC_MODU.'form2.php'); ?>
+    <?php require(INC_MODU.'form1hndlr.php'); ?>
+    <?php require(INC_MODU.'form1.php'); ?>
+    <?php require(INC_MODU.'form2hndlr.php'); ?>
+    <?php require(INC_MODU.'form2.php'); ?>
 </div>
     
 <div id="footer">
