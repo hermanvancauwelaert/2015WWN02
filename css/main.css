@@ -10,7 +10,9 @@ html, body {
 }
 
 .column {
-    width:33.33333333%;
+    background: hsla(185, 25%, 20%, 0.4);
+    margin: 1%;
+    width:30.33333333%;
     float:left;
 }
 
